@@ -1,9 +1,37 @@
 // Put imports here!
+@import "colors";
 
-
+@mixin sideMargin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
 
 // Put any variable declarations here!
+.container {
+  width: calc(100% - 400px);
 
+  @include sideMargin(auto);
 
+  ul, ol {
+    color: $red;
+  }
+  ul {
+    font-family: sans-serif;
+  }
+  ol {
+    font-family: monospace;
+  }
+  background-color: pink;
+  &.first {
+    p {
+      background-color: blue;
+    }
+  }
+  &.second {
+    p {
+      background-color: orange;
+    }
+  }
+}
 
-// Put your actual Sassy CSS code here!
+// Make the ul font family be sans-serif and the ol font family be monospace.
